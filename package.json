@@ -1,0 +1,15 @@
+{
+  "name": "eco-aether",
+  "version": "1.0.0",
+  "description": "ECO AETHER website with a simple Express backend for signup and login.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

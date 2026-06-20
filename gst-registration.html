@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GST Registration - ECO AETHER</title>
+    <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+<a href="dashboard.html" class="back-btn">
+⬅ Back to Dashboard
+</a>
+<body>
+
+<div class="main-content">
+
+    <h1>GST Registration</h1>
+
+    <p>
+        Select your applicant type to view the required documents.
+    </p>
+
+    <div class="service-grid">
+
+        <div class="service-card"
+             onclick="showDocs('individual')">
+            👤 Individual
+        </div>
+
+        <div class="service-card"
+             onclick="showDocs('business')">
+            🏢 Business
+        </div>
+
+    </div>
+
+    <div id="documents"></div>
+
+</div>
+
+<script>
+
+function showDocs(type){
+
+let docs =
+document.getElementById("documents");
+
+if(type==="individual"){
+
+docs.innerHTML=`
+
+<h2>Required Documents</h2>
+
+<ul>
+<li>PAN Card</li>
+<li>Aadhaar Card</li>
+<li>Passport Size Photograph</li>
+<li>Bank Account Details</li>
+<li>Mobile Number</li>
+<li>Email Address</li>
+</ul>
+
+<hr>
+
+<p>
+Please send the above documents to:
+<b>ecoaether998@gmail.com</b>
+</p>
+<p style="color:green;">
+✅ Our compliance team will review your documents and contact you within 24 hours.
+</p>
+
+`;
+
+}else{
+
+docs.innerHTML=`
+
+<h2>Required Documents</h2>
+
+<ul>
+<li>Company PAN Card</li>
+<li>Certificate of Incorporation</li>
+<li>Director PAN Card</li>
+<li>Director Aadhaar Card</li>
+<li>Business Address Proof</li>
+<li>Cancelled Cheque</li>
+<li>Mobile Number</li>
+<li>Email Address</li>
+</ul>
+
+<hr>
+
+<p>
+Please send the above documents to:
+<b>ecoaether998@gmail.com</b>
+</p>
+<p style="color:green;">
+✅ Our compliance team will review your documents and contact you within 24 hours.
+</p>
+
+
+`;
+
+}
+
+}
+
+</script>
+<script>
+
+if(localStorage.getItem("theme")==="dark"){
+    document.body.classList.add("dark-mode");
+}
+
+</script>
+</body>
+</html>
