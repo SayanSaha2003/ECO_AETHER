@@ -19,6 +19,15 @@ background-size:400% 400%;
 animation:bgMove 12s ease infinite;
 }
 
+/* Touch-Friendly Base Styles */
+button, a, input[type="submit"], [role="button"] {
+    min-height: 48px;
+}
+
+button, input[type="submit"], .btn-primary {
+    min-width: 48px;
+}
+
 /* SIDEBAR */
 
 .sidebar{
@@ -498,4 +507,301 @@ transform:rotate(-15deg);
 .dark-mode #documents{
     background:#1e293b;
     color:white;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Mobile Menu Toggle */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #020B1D;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Extra Small Devices (Mobile - 320px to 480px) */
+@media(max-width:480px){
+    .sidebar {
+        width:100%;
+        height:auto;
+        position:relative;
+        padding:15px;
+        margin-bottom:10px;
+    }
+
+    .main-content {
+        margin-left:0;
+        padding:15px;
+    }
+
+    .logo-section h2 {
+        font-size:18px;
+    }
+
+    .logo-section img {
+        width:60px;
+        height:60px;
+    }
+
+    .sidebar a {
+        padding:12px;
+        font-size:14px;
+    }
+
+    #themeBtn {
+        padding:10px;
+        font-size:14px;
+    }
+
+    .topbar {
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    #welcomeUser {
+        font-size:28px;
+    }
+
+    .right-section {
+        width:100%;
+        gap:10px;
+    }
+
+    .notification {
+        font-size:20px;
+    }
+
+    .search-bar input {
+        font-size:14px;
+        padding:12px;
+    }
+
+    .stats-grid {
+        grid-template-columns:1fr;
+    }
+
+    .stat-card {
+        padding:20px;
+    }
+
+    .stat-card h3 {
+        font-size:28px;
+    }
+
+    .section-title {
+        font-size:24px;
+        margin:30px 0 15px;
+    }
+
+    .service-grid {
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .service-card {
+        height:70px;
+        font-size:16px;
+        padding:15px;
+    }
+
+    .activity-section {
+        padding:20px;
+        border-radius:15px;
+    }
+
+    .activity-item {
+        padding:12px;
+        font-size:14px;
+    }
+
+    .profile-card {
+        flex-direction:column;
+        gap:10px;
+        padding:15px;
+    }
+
+    .avatar {
+        width:50px;
+        height:50px;
+        font-size:20px;
+    }
+
+    #documents {
+        padding:20px 15px;
+        margin:20px 0;
+    }
+
+    .back-btn {
+        margin:15px;
+        padding:10px 16px;
+        font-size:14px;
+    }
+}
+
+/* Tablet - Small (480px to 768px) */
+@media(max-width:768px){
+    .sidebar {
+        width:100%;
+        height:auto;
+        position:relative;
+        padding:20px;
+        margin-bottom:15px;
+    }
+
+    .main-content {
+        margin-left:0;
+        max-width:100%;
+        padding:25px;
+    }
+
+    .logo-section h2 {
+        font-size:20px;
+    }
+
+    .logo-section img {
+        width:70px;
+        height:70px;
+    }
+
+    .sidebar a {
+        padding:13px;
+        font-size:15px;
+    }
+
+    #themeBtn {
+        padding:11px;
+        font-size:15px;
+    }
+
+    .topbar {
+        flex-direction:column;
+        gap:15px;
+        align-items:flex-start;
+    }
+
+    #welcomeUser {
+        font-size:32px;
+    }
+
+    .right-section {
+        width:100%;
+        justify-content:flex-start;
+    }
+
+    .search-bar input {
+        font-size:15px;
+        padding:15px;
+    }
+
+    .stats-grid {
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .stat-card {
+        padding:22px;
+    }
+
+    .stat-card h3 {
+        font-size:32px;
+    }
+
+    .section-title {
+        font-size:28px;
+        margin:35px 0 20px;
+    }
+
+    .service-grid {
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
+
+    .service-card {
+        height:85px;
+        font-size:18px;
+    }
+
+    .activity-section {
+        padding:25px;
+    }
+
+    .activity-item {
+        padding:13px;
+    }
+
+    .profile-card {
+        flex-direction:row;
+        padding:18px;
+    }
+
+    .avatar {
+        width:55px;
+        height:55px;
+    }
+
+    #documents {
+        padding:25px;
+        margin:30px auto;
+    }
+
+    .back-btn {
+        margin:18px;
+        padding:11px 20px;
+        font-size:15px;
+    }
+}
+
+/* Desktop - Large (769px and above) */
+@media(min-width:769px){
+    .sidebar {
+        width:250px;
+        height:100vh;
+        position:fixed;
+        top:0;
+        left:0;
+        padding:30px;
+    }
+
+    .main-content {
+        margin-left:250px;
+        max-width:1200px;
+        padding:40px;
+    }
+
+    .topbar {
+        flex-direction:row;
+    }
+
+    #welcomeUser {
+        font-size:46px;
+    }
+
+    .right-section {
+        width:auto;
+    }
+
+    .stats-grid {
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    }
+
+    .service-grid {
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    }
+
+    .service-card {
+        height:90px;
+    }
+
+    #documents {
+        max-width:900px;
+    }
 }
