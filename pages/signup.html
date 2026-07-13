@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up - ECO AETHER</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-logo">ECO AETHER</div>
+
+                <h2>Create Account</h2>
+
+                <p>Join ECO AETHER today</p>
+
+                <form onsubmit="saveUser(event)">
+                    <input
+                        type="text"
+                        name="fullname"
+                        id="fullname"
+                        placeholder="Full Name"
+                        required
+                    />
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email Address"
+                        required
+                    />
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        placeholder="Mobile Number"
+                        required
+                    />
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        required
+                    />
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm Password"
+                        required
+                    />
+
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p class="auth-link">
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+            </div>
+        </div>
+        <script>
+            async function saveUser(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("fullname").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const mobile = document.getElementById("mobile").value.trim();
+                const password = document.getElementById("password").value;
+                const confirmPassword =
+                    document.getElementById("confirmPassword").value;
+
+                if (mobile.length !== 10) {
+                    alert("Please enter a valid 10-digit mobile number");
+                    return;
+                }
+
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match!");
+                    return;
+                }
+
+                try {
+                    const response = await fetch("/api/signup", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            fullname: name,
+                            email,
+                            mobile,
+                            password,
+                        }),
+                    });
+
+                    const data = await response.json();
+                    if (!response.ok) {
+                        alert(data.error || "Signup failed");
+                        return;
+                    }
+
+                    alert(data.message);
+                    window.location.href = "login.html";
+                } catch (error) {
+                    console.error(error);
+                    alert("Unable to complete signup. Please try again.");
+                }
+            }
+        </script>
+    </body>
+</html>

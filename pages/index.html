@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ECO AETHER</title>
+
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo">ECO AETHER</div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search Services..." />
+            </div>
+
+            <div class="nav-buttons">
+                <a href="login.html">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-tag">Trusted By 500+ Businesses</span>
+
+                <h1>Business Compliance Made Easy</h1>
+
+                <p>
+                    GST Registration, ITR Filing, TDS Filing, Company
+                    Incorporation and Annual Compliance Services under one
+                    platform.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#services" class="btn-primary">
+                        Explore Services
+                    </a>
+
+                    <a href="#contact" class="btn-primary"> Contact Us </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-box">
+                <h2>500+</h2>
+                <p>Businesses Served</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>98%</h2>
+                <p>Client Satisfaction</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>1200+</h2>
+                <p>Returns Filed</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>24/7</h2>
+                <p>Support</p>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+
+            <p class="section-intro">
+                Choose the compliance service you need and get started in a few
+                clicks.
+            </p>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>GST Registration</h3>
+                    <p>Quick and hassle-free GST registration.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>GST Return Filing</h3>
+                    <p>Monthly and quarterly GST filing support.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>TDS Return Filing</h3>
+                    <p>Accurate and timely TDS return management.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Basic ITR Filing</h3>
+                    <p>Income tax return filing for individuals.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Company Incorporation</h3>
+                    <p>Complete company registration assistance.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Annual Compliance Tracking</h3>
+                    <p>Stay compliant throughout the year.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us">
+            <h2>Why Choose Us?</h2>
+
+            <p class="section-intro">
+                We focus on fast support, clear pricing, and practical
+                compliance help.
+            </p>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Expert Team</h3>
+                    <p>Experienced tax and compliance professionals.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>Fast Processing</h3>
+                    <p>Quick filing and registration support.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>Affordable Pricing</h3>
+                    <p>Transparent and competitive pricing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US -->
+
+        <section class="about">
+            <h2>About Us</h2>
+
+            <p>
+                ECO AETHER is a professional business compliance and consulting
+                firm committed to helping startups, entrepreneurs, and
+                organizations navigate complex regulatory requirements with
+                confidence. We specialize in GST registration, GST return
+                filing, income tax services, company incorporation, annual
+                compliance management, and business advisory solutions. Our goal
+                is to provide reliable, transparent, and efficient services that
+                empower businesses to focus on growth while ensuring full
+                compliance with statutory obligations.
+            </p>
+        </section>
+
+        <!-- CONTACT -->
+
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+
+            <p class="section-intro">
+                Reach out if you want help choosing the right compliance
+                service.
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span>Email</span>
+                    <strong>ecoaether998@gmail.com</strong>
+                </div>
+
+                <div class="contact-card">
+                    <span>Helpline</span>
+                    <strong>+91 9876543210</strong>
+                </div>
+
+                <div class="contact-card">
+                    <span>Location</span>
+                    <strong>Kolkata, West Bengal, India</strong>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <h3>ECO AETHER</h3>
+
+            <p>GST • TDS • ITR • Company Registration • Compliance Tracking</p>
+
+            <p>© 2026 ECO AETHER . All Rights Reserved.</p>
+        </footer>
+        <script>
+            document
+                .querySelectorAll(
+                    ".service-card, .why-card, .stat-box, .btn-primary",
+                )
+                .forEach((item) => {
+                    item.addEventListener("click", function () {
+                        window.location.href = "signup.html";
+                    });
+                });
+        </script>
+    </body>
+</html>
