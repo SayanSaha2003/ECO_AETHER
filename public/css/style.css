@@ -119,9 +119,19 @@ table th {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     font-size: 30px;
     font-weight: 700;
     color: #0f172a;
+}
+
+.logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .search-box {
@@ -567,6 +577,12 @@ footer {
         order: 1;
         width: 100%;
         text-align: center;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 34px;
+        height: 34px;
     }
 
     .search-box {
