@@ -28,8 +28,34 @@
                 <h2 id="welcomeUser"></h2>
 
                 <div class="right-section">
-                    <div class="notification">🔔</div>
-                </div>
+
+    <div class="notification" onclick="toggleNotification()">
+        🔔
+    </div>
+
+    <div class="notification-popup" id="notificationPopup">
+
+        <h3>Notifications</h3>
+
+        <div class="notify-item">
+            📄 GST Return due in 5 days
+        </div>
+
+        <div class="notify-item">
+            📑 Annual Compliance pending
+        </div>
+
+        <div class="notify-item">
+            🤖 AI Assistant coming soon
+        </div>
+
+        <div class="notify-item">
+            ✅ Welcome to ECO AETHER
+        </div>
+
+    </div>
+
+</div>
             </div>
 
             <div class="search-bar">
@@ -112,23 +138,7 @@
                 localStorage.removeItem("mobile");
                 window.location.href = "login.html";
             }
-
-            /* DARK MODE */
-
-            const themeBtn = document.getElementById("themeBtn");
-
-            themeBtn.addEventListener("click", function () {
-                document.body.classList.toggle("dark-mode");
-
-                if (document.body.classList.contains("dark-mode")) {
-                    localStorage.setItem("theme", "dark");
-                } else {
-                    localStorage.setItem("theme", "light");
-                }
-            });
-            if (localStorage.getItem("theme") === "dark") {
-                document.body.classList.add("dark-mode");
-            }
         </script>
+        <script src="/js/dashboard.js"></script>
     </body>
 </html>
