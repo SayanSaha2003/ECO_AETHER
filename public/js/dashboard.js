@@ -52,3 +52,27 @@ if (themeBtn) {
         }
     });
 }
+function toggleNotification() {
+    const popup = document.getElementById("notificationPopup");
+
+    if (popup.style.display === "block") {
+        popup.style.display = "none";
+    } else {
+        popup.style.display = "block";
+    }
+}
+
+// Close popup when clicking outside
+document.addEventListener("click", function (event) {
+    const popup = document.getElementById("notificationPopup");
+    const bell = document.querySelector(".notification");
+
+    if (
+        popup &&
+        bell &&
+        !popup.contains(event.target) &&
+        !bell.contains(event.target)
+    ) {
+        popup.style.display = "none";
+    }
+});
